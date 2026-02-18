@@ -1,0 +1,126 @@
+2/06/2026
+
+Common Relationship Mistakes 
+	- Everything Knows Everything	
+	- Bidirectional relationships everwhere 
+	- Premature Complexity 
+
+Wrap Up
+	- Relationships express responsibility 
+	- ownership Matters 
+	- Design before code 
+	
+Object Collaboration and the Law of Demeter 
+
+	1. Objects collaborate by: 
+		- Calling Methods 
+		- Passing messages 
+		- Delegating work 	
+		
+Example: 
+	public class TaskList {
+	
+		private List<Task> tasks = new ArrayList<>(); 
+		
+		// uses new class of Task to make a new task to manage 
+		public void addTask(String title) {
+			tasks.add(new Task(title); // manages the other class Task() here
+		}
+		
+		public void remove(Task task) {
+			tasks.remove(task); 
+		}
+	}
+
+Bad Collabration Example: 
+
+	// too many dependices 
+	task.getTaskList().getTasks().add(task); 
+	
+Why This is a Problem 
+	- High coupling 
+	- Breaks encapsulation 
+	- Fragile design 
+	
+Mediator (Design Pattern - Multiple Aircraft Towers - High Coupling)
+	- https://en.wikipedia.org/wiki/Mediator_pattern 
+	- Ex. Aircraft towers that connect to other aircraft towers 
+
+Law of Demeter 
+	- An Object should only talk to
+		- Itself 
+		- it's field 
+		- sits method parameters 
+		- objects it creates 
+	- This helps Reduce Coupling and Increase maintainability 
+	
+	- A given object should only talk to its immediate friends, not strangers
+	
+	Encapsulation Enforced 
+		- Hide internal structure 
+		- Expose meaningful behavior 
+		- Reduce knowledge leaks 
+		
+		Ex. 
+		// expose it privately and hidden: 
+		task.add(task); 
+		
+	Coupling 
+		- Degree of dependency between classes 
+		- High coupling is risky 
+		- Low coupling is resilient 
+		
+	Cohesion 
+		- How focused a class is 
+		- High cohesion is desirable 
+		- One clear purpose per class 
+		
+	Collaboration Refactoring 
+		- Move logic closer to data 
+		- Replace chains with methods 
+		- Let objects do their job 
+		
+	Wrap Up
+		- Objects collaborate via messages 
+		- Law of Demeter reduces coupling 
+		- Good design hides structure 
+	
+Starting Design 
+	- Task 
+		- Store Task data
+	- TaskList 
+		- Manages Tasks 
+	- TaskManager 
+		- Coordinates actions 
+		taskManager.completeTask(taskId); 
+		
+Example Application: 
+	public class Task {
+		
+		private String description; 
+		private boolean isCompleted; 
+		private int id = 0; 
+		
+		public Task(String description, boolean isCompleted, int id) {
+			this.description = description; 
+			this.isCompleted = isCompleted; 
+			this.id  		 = id; 
+		}
+		
+		private int getId() {
+			return id; 
+		}
+		
+		public boolean isCompleted() {
+			return isCompleted;
+		}
+		
+		public boolean markCompleted(boolean markCompleted) {
+			
+			if(isCompleted == false) {return false;}
+			this.isCompleted = markCompleted
+			
+			return true; 
+		}
+	
+	}

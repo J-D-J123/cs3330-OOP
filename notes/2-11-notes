@@ -1,0 +1,95 @@
+02/11/2026
+
+Collaboration Smells (code smells)
+	- Long method chains 
+	- God objects 
+	- Objects doing other's jobs 
+	
+Refactoring Checklist
+	 - Can I move this method?
+	 - Does this object know too much?
+	 	- is it your bussiness to know everthing?
+	 - Is this relationship necessary? 
+	 
+What You Just Learned 
+	- Relationships shape design 
+	- Collaboration drives behavior 
+	- Encapsulation is enforced through structure 
+	
+Up Next!
+	- Inheritance 
+	- Interfaces 
+	- Polymorphism 
+	- When not to inherit 
+	
+Polymorphism
+	- Reusing behavior responsibly 
+	- Replacing conditionals with polymorphism 
+	- Designing for extension 
+	- Understanding when inheritance helps and when it hurts 
+	
+Why We Even Want Inheritance 
+	- Avoid duplication 
+	- Share a common behavior 
+	- Model "is a" relationship
+	
+What Inheritance Gives You 
+	- Field and method reuse 
+	- Method overriding 
+	- Subtype polymorphism 
+	
+Method @Overriding 
+	- Change meaning of a method 
+
+The "Is A" Test 
+	Class Animal 
+		- String name 
+			+eat()
+			+sleep()
+	Class Dog
+			+bark()
+			
+	- A dog is a animal 
+	- A car is not a wheel 
+	- A squre is cannot bark
+	
+	
+Basic Example of Inheritance
+	Class Animal 
+		- String name
+		
+	Class Dog	
+	Class Cat 
+	
+	
+	public class Animal {
+	
+		private String name; 
+		protecte int   aget; 
+		
+		public Animal(String name) {
+		
+			this.name = name; 
+			System.out.println("Animal Object with "+ name + "Created");  
+		}
+	}
+	
+	public class Dog extends Animal {
+	
+		public Dog(String name) {
+		
+			super(name); 
+			super.age; 
+			
+			// System.out.println("Dog Object Created");
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	

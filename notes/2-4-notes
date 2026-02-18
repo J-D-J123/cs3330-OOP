@@ -1,0 +1,62 @@
+02/4/2026
+
+Refactoring Result 
+	- Clear responsibilites 
+	- Safer Object 
+	- Better Design 
+	- Studied in Research to refactor efficently 
+	
+UML Updated View
+	- Task with constructor 
+	- Private fields 
+	- Public behavior 
+	
+Key Takeaways
+	- Classes protect their state 
+	- Constructors enforce correctness 
+	- Immutability is powerful 
+	
+Object Relationships and Collaboration 
+	- Objects rarely live alone 
+	- Classes form relationships 
+	- Design about collaboration 
+	- Focus: how objects connect and communicate 
+
+Big Idea 
+	- Objects solve problems by 
+		1. knowing things 
+		2. doing things 
+		3. asking other objects for help 
+
+Classes: 
+	+ Task()
+		- String task 
+	TaskList()
+		- Task()
+	TaskManager()
+		- TaskList()
+
+Classes Do Not Exist in Isolation 
+	- A Task belongs to a TaskList
+	- A Student enrolls in Courses 
+	- An Order contains Items 
+	
+What Is a Relationship?
+	- A relationship describes: 
+		1. how objects are connected 
+		2. who knows about whom 
+		3. who depends on whom 
+		
+Types of Relationships We Care About 
+	1. Association
+		- one knows the other 
+	2. Aggression 
+		- not tied together (loose relationship) 
+	3. Composition 
+		- strong ownership, parts cannot exist independently 
+
+Choosing the Right Relationship
+	- Ask yourself: 
+		1. Who owns whom?
+		2. Who creates whom?
+		3. Who contorls lifetime?

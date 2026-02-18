@@ -1,0 +1,31 @@
+02/16/2026
+
+Interfaces 
+	- Define behavior contracts 
+	- No state (mostly)
+	- Support multiple inheritance of behavior 
+	- They are NOT CLASSES!
+	
+Interface Example 
+	Ex. 
+	
+	public interface Payable {
+		double calculatePay(); 	
+	}
+	
+Interface vs Abstract Class 
+	- Interface: what you can do 
+	- Abstract class: what you are 
+	- Prefer interfaces for flexibility 
+	
+Example with multithreading 
+	- Class Thread 
+	- Interface Runnable 
+	
+	- Class Task 	// have two options you can use the class thread or the interface 
+
+Which should be a interface?
+	- Flyable 		// implyes a behavior (yes this can be a interface)
+	- Bird 			// nope more of a class not a interface
+	- Serializable  // implys a behavior (yes this can be a interface)
+	

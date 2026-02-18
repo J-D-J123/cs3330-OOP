@@ -1,0 +1,20 @@
+01/28/2026
+
+Private 
+	- Protects invariants 
+	- Reduces Coupling 
+	- Enables Safe refactoring 
+	
+Change Public to Private 
+	- Bit better but not perfect 
+	
+Protected Visibility 
+	- Animals -> Mamals -> Reptilies 
+	- Mamals -> Dog -> Tiger
+	- Reptilies 
+	- Animals -> Protected Walk() -> now everyone can walk under that field 
+	
+Common Access Modifer Mistakes 
+	- Making Everything Public 
+	- Using protected instead of composition 
+	- Exposing fields directly 
